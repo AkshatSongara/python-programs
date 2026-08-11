@@ -19,4 +19,3 @@ else:
     else:
 
         print("Strings are anagrams.")
-

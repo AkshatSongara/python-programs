@@ -31,3 +31,7 @@ while guess_counter < 10:
         print("Number of guesses:", guess_counter)
 
         break
+
+else:
+
+    print("Game Over!")

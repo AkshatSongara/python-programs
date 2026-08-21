@@ -2,13 +2,19 @@ import random
 
 number = random.randint(1, 100)
 
+guess_counter = 0
+
 print("Number Guessing Game")
 
-print("You have chosen a number 1 to 100.")
+print("I have chosen a number from 1 to 100.")
 
-while True:
+print("You have 10 attempts.")
+
+while guess_counter < 10:
 
     guess = int(input("Enter a guess: "))
+
+    guess_counter = guess_counter + 1
 
     if guess < number:
 
@@ -21,5 +27,7 @@ while True:
     else:
 
         print("Correct! You guess the number!")
+
+        print("Number of guesses:", guess_counter)
 
         break

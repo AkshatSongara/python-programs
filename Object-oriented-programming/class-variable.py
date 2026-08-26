@@ -11,8 +11,8 @@ class Employee:
 
         print("Employee Name:", self.name)
         print("Employee salary:", self.salary)
-        print("Employee Company:", self.company)        # Call by class name..
-        print("Employee Company", Employee.company)     # Call by object..
+        print("Employee Company:", self.company)        # Call by object..
+        print("Employee Company", Employee.company)     # Call by class name..
 
 e1 = Employee("Kishore", 15000)
 e2 = Employee("Vinod", 20000)

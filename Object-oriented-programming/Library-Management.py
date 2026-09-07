@@ -4,6 +4,7 @@ class Book:
         self.book_id = book_id
         self.title = title
         self.author = author
+        self.is_available = True
 
     def display(self):
         status = "Available" if self.is_available else "Issued"
@@ -17,8 +18,8 @@ class Student:
         self.name = name
 
     def display(self):
-        print(f"Student Id: ", {self.student_id})
-        print(f"Name: ", {self.name})
+        print(f"Student Id: {self.student_id}")
+        print(f"Name: {self.name}")
 
 
 class Librarian:
@@ -28,8 +29,8 @@ class Librarian:
         self.name = name
 
     def display(self):
-        print(f"Librarian Id: ", {self.librarian_id})
-        print(f"Name: ", {self.name})
+        print(f"Librarian Id: {self.librarian_id}")
+        print(f"Name: {self.name}")
 
 
 class Transaction:
@@ -63,7 +64,7 @@ class Library:
         self.books.append(book)
         print(f"Book '{book.title}' added successfully.")
 
-    def display_book(self):
+    def display_books(self):
         print("\n---- Library Books ----")
 
         for book in self.books:
@@ -82,14 +83,28 @@ library.add_book(book2)
 
 student1 = Student(1, "Ramesh")
 
-librarian = Librarian(501, "Priya")
+librarian1 = Librarian(501, "Priya")
 
 print("\n---- Student Details ----")
 student1.display()
 
-print("\n---- Student Details ----")
-librarian.display()
+print("\n---- Librarian Details ----")
+librarian1.display()
+
+library.display_books()
+
+# Issued Books..
 
 transaction = Transaction(book1, student1)
+
+print("\n---- Issued Book ----")
 transaction.issued_book()
+
+library.display_books()
+
+# Returned books..
+
+print("\n---- Return Book ----")
 transaction.return_book()
+
+library.display_books()

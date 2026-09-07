@@ -21,6 +21,15 @@ class Student:
         print(f"Name: ", {self.name})
 
 
+class Librarian:
+
+    def __init__(self, librarian_id, name):
+        self.librarian_id = librarian_id
+        self.name = name
+
+    def display(self):
+        print(f"Librarian Id: ", {self.librarian_id})
+        print(f"Name: ", {self.name})
 
 book1 = Book(101, "Python Programming", "John Smith")
 book2 = Book(102, "Data Structures", "Robert Brown")
@@ -30,3 +39,6 @@ book2.display()
 
 student1 = Student(1, "Ramesh")
 student1.display()
+
+librarian = Librarian(501, "Priya")
+librarian.display()

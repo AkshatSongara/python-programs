@@ -53,6 +53,21 @@ class Transaction:
             print("This book was not issued")
 
 
+class Library:
+
+    def __init__(self, name):
+        self.name = name
+        self.books = []
+
+    def add_book(self, book):
+        self.books.append(book)
+        print(f"Book '{book.title}' added successfully.")
+
+    def display_book(self):
+        print("\n---- Library Books ----")
+
+        for book in self.books:
+            book.display()
 
 book1 = Book(101, "Python Programming", "John Smith")
 book2 = Book(102, "Data Structures", "Robert Brown")

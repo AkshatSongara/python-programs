@@ -69,16 +69,25 @@ class Library:
         for book in self.books:
             book.display()
 
+
+# Main Program..
+
+library = Library("City Library")
+
 book1 = Book(101, "Python Programming", "John Smith")
 book2 = Book(102, "Data Structures", "Robert Brown")
 
-book1.display()
-book2.display()
+library.add_book(book1)
+library.add_book(book2)
 
 student1 = Student(1, "Ramesh")
-student1.display()
 
 librarian = Librarian(501, "Priya")
+
+print("\n---- Student Details ----")
+student1.display()
+
+print("\n---- Student Details ----")
 librarian.display()
 
 transaction = Transaction(book1, student1)

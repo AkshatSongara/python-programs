@@ -5,6 +5,7 @@ class Book:
         self.title = title
         self.author = author
         self.is_available = True
+        self.issued_to = None
 
     def display(self):
         status = "Available" if self.is_available else "Issued"
@@ -42,6 +43,7 @@ class Transaction:
     def issued_book(self):
         if self.book.is_available:
             self.book.is_available = False
+            self.book.issued_to = self.student
             print(f"Book '{self.book.title}' issued to {self.student.name}.")
         else:
             print("Sorry, this book is already issued.")

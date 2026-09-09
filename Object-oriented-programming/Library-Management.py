@@ -51,6 +51,7 @@ class Transaction:
     def return_book(self):
         if not self.book.is_available:
             self.book.is_available = True
+            self.book.issued_to = None
             print(f"Book '{self.book.title}' returned by {self.student.name}.")
         else:
             print("This book was not issued")

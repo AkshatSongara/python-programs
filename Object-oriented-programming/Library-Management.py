@@ -9,7 +9,7 @@ class Book:
 
     def display(self):
         status = "Available" if self.is_available else "Issued"
-        print(f"{self.book_id} | {self.title} | {self.title} | {self.author} | {status}")
+        print(f"{self.book_id} | {self.title} | {self.author} | {status}")
 
 
 class Student:
@@ -80,7 +80,7 @@ class Library:
                 book.display()
                 return
 
-        print("Book not found.")
+        print("\nBook not found.")
 
 
 # Main Program..
@@ -104,6 +104,8 @@ print("\n---- Librarian Details ----")
 librarian1.display()
 
 library.display_books()
+
+library.search_book("Python Programming")
 
 # Issued Books..
 

@@ -73,6 +73,15 @@ class Library:
         for book in self.books:
             book.display()
 
+    def search_book(self, title):
+        for book in self.books:
+            if book.title.lower() == title.lower():
+                print("\nBook Found:")
+                book.display()
+                return
+
+        print("Book not found.")
+
 
 # Main Program..
 

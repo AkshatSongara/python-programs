@@ -40,7 +40,7 @@ class Transaction:
         self.book = book
         self.student = student
 
-    def issued_book(self):
+    def issue_book(self):
         if self.book.is_available:
             self.book.is_available = False
             self.book.issued_to = self.student

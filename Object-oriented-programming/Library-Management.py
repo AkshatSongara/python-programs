@@ -101,7 +101,7 @@ library.display_books()
 transaction = Transaction(book1, student1)
 
 print("\n---- Issued Book ----")
-transaction.issued_book()
+transaction.issue_book()
 
 library.display_books()
 
